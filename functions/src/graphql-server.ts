@@ -1,23 +1,29 @@
-import express from 'express';
-import {ApolloServer} from 'apollo-server-express';
+import {ApolloServer} from 'apollo-server-cloud-functions';
 
 import schema from './schema';
 import resolvers from './resolvers';
 
-function gqlServer() {
-  const app = express();
-
   const apolloServer = new ApolloServer({
     typeDefs: schema,
     resolvers,
-    // Enable graphiql gui
+    context: ({ req, res }) => ({
+      headers: req.headers,
+      req,
+      res,
+    }),
     introspection: true,
-    playground: true
+    playground: true,
+    engine: {
+      apiKey: "service:pinetype-notes:ydJpSbU88ufDB_8wXidYXw",
+      endpointUrl: "https://us-central1-pinetype.cloudfunctions.net/api"
+    }
   });
 
-  apolloServer.applyMiddleware({app, path: '/', cors: true});
+const handler = apolloServer.createHandler(
+  {cors: {
+    origin: '*',
+    credentials: true,
+  }}
+);
 
-  return app;
-}
-
-export default gqlServer;
+export default handler;

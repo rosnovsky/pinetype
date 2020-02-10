@@ -1,7 +1,8 @@
-const {gql} = require('apollo-server-express');
+const {gql} = require('apollo-server-cloud-functions');
 
 const schema = gql`
   scalar Date
+  scalar Geopoint
 
   type User {
     id: ID!
@@ -11,22 +12,23 @@ const schema = gql`
     location: Geo
     avatar: String
     slug: String
+    notes: [Note]
   }
   
   type Geo {
-    lat: Float
-    lon: Float
+    coordinates: Geopoint
     name: String
   }
 
   type Note {
     id: ID!
     userId: ID
+    user: User
     text: String!
-    metadata: Metadata
+    NoteMetadata: NoteMetadata
   }
 
-  type Metadata {
+  type NoteMetadata {
     noteId: ID
     date: Date
     title: String!
@@ -52,10 +54,9 @@ const schema = gql`
   }
   
   type Query {
-    users: [User]
     notes: [Note]
+    user(id: String!): User
   }
-
 `;
 
 export default schema;
