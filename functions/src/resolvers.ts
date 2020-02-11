@@ -1,8 +1,6 @@
 import * as admin from "firebase-admin";
 import {ApolloError, ValidationError} from 'apollo-server-cloud-functions';
 
-admin.initializeApp();
-
 const resolverFunctions = {
   User:{
     async notes(user: any) {

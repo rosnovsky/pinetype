@@ -30,7 +30,9 @@
     "svelte-loader": "^2.13.6"
   },
   "dependencies": {
+    "@auth0/auth0-spa-js": "^1.6.4",
     "apollo-boost": "^0.4.7",
+    "firebase": "^7.8.1",
     "graphql": "^14.6.0",
     "sirv-cli": "^0.4.4",
     "svelte-apollo": "^0.3.0"
