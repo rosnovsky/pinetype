@@ -77,7 +77,8 @@ function createAuth(config) {
 
   const logout = () => {
     auth0.logout({
-      returnTo: window.location.origin
+      clientID: "PeGiv5sGXsHT7WxmQ394C6rQMp96HrLq",
+      returnTo: "https://pinetype.firebaseapp.com"
     });
   };
 

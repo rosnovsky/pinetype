@@ -1,5 +1,5 @@
 import * as admin from "firebase-admin";
-import {ApolloError, ValidationError} from 'apollo-server-cloud-functions';
+import {ApolloError, ValidationError, AuthenticationError} from 'apollo-server-cloud-functions';
 
 const resolverFunctions = {
   User:{
@@ -13,7 +13,7 @@ const resolverFunctions = {
           return userNotes.docs.map(note => note.data());
       }
       catch(err){
-        throw new ApolloError(err);
+        throw new AuthenticationError(err);
       }
     }
   },
@@ -52,7 +52,7 @@ const resolverFunctions = {
         return user || new ValidationError("User ID not found")
       }
       catch(err){
-        throw new ApolloError(err);
+        throw new AuthenticationError(err);
       }
     }
   }
