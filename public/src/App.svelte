@@ -10,7 +10,7 @@
   const config = {
     domain: 'auth.rosnovsky.us',
     client_id: 'PeGiv5sGXsHT7WxmQ394C6rQMp96HrLq',
-    redirectUri: 'https://pinetype.firebaseapp.com',
+    redirectUri: 'https://pinetype-test.now.sh',
     responseType: "token id_token",
     scope: "openid profile email",
   };
@@ -34,7 +34,7 @@
   };
 
   const client = new ApolloClient({
-    uri: "https://us-central1-pinetype.cloudfunctions.net/api",
+    uri: "https://pinetype-test.now.sh/api/gql",
     onError: ({ networkError, graphQLErrors }) => {
       console.log("graphQLErrors", graphQLErrors);
       console.log("networkError", networkError);

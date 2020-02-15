@@ -5,12 +5,13 @@
     "noUnusedLocals": true,
     "outDir": "lib",
     "sourceMap": true,
-    "strict": true,
+    "strict": false,
     "target": "es2017",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "noImplicitAny": false
   },
   "compileOnSave": true,
   "include": [
-    "src", "_utils/graphql-server.ts", "index.ts", "_utils/mongoConfig.ts", "_utils/resolvers.ts", "_utils/schema.ts"
+    "src/utils", "src/gql.ts"
   ]
 }
