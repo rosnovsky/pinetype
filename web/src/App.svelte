@@ -10,7 +10,7 @@
   const config = {
     domain: 'auth.rosnovsky.us',
     client_id: 'PeGiv5sGXsHT7WxmQ394C6rQMp96HrLq',
-    redirectUri: 'https://pinetype-test.now.sh',
+    redirectUri: 'http://localhost:3000',
     responseType: "token id_token",
     scope: "openid profile email",
   };
@@ -34,7 +34,7 @@
   };
 
   const client = new ApolloClient({
-    uri: "https://pinetype-test.now.sh/api/gql",
+    uri: "http://localhost:3000/api/gql",
     onError: ({ networkError, graphQLErrors }) => {
       console.log("graphQLErrors", graphQLErrors);
       console.log("networkError", networkError);
@@ -42,10 +42,11 @@
     fetchOptions: {
       mode: 'cors',
       credentials: true,
+      playground: true,
       headers: {
         "Access-Control-Allow-Credentials" : true,
         "Access-Control-Allow-Origin  ": "*",
-        "Content-Type": "application/graphql",
+        "Content-Type": "application/json",
         "authorization": `Bearer ${authToken}`
       }
     },

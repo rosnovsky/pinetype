@@ -7,7 +7,7 @@ yarn-error.log*
 firebase-debug.log*
 
 # Firebase cache
-.firebase/
+.node_modules
 lib/
 
 # Firebase config
