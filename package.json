@@ -11,10 +11,10 @@
     "mongoose": "^5.9.1"
   },
   "scripts": {
-    "start:lambda": "netlify-lambda serve functions/gql/",
+    "start:lambda": "netlify-lambda serve functions/mongodb-graphql/",
     "build": "run-p build:public/**",
     "build:app": "cd public && npm build",
-    "build:lambda": "netlify-lambda build functions/gql/"
+    "build:lambda": "netlify-lambda build functions/mongodb-graphql/"
   },
   "repository": {
     "type": "git",

@@ -10,6 +10,7 @@ Pinetype is an educational project to help all involved learn how to build an ap
 A note taking app with mental health focus. Let the mind flow, 500 words a day, automatic sentiment analysis with graphs, charts, stats, badges, tags, trends and such; gratitude section (with some rewards built in)
 
 ### Tech
+
 - React with transition to Svelte
 - Serverless (Google Cloud, AWS or zeit.com)
 - Notes encryption (https://nodejs.org/api/crypto.html)
@@ -59,5 +60,3 @@ A note taking app with mental health focus. Let the mind flow, 500 words a day, 
 This project is open for everyone to join.
 
 Please mind the [Code of Conduct](/CODE_OF_CONDUCT.md). This project is intended to be a welcoming, inclusive and friendly space. Hate speech or harassment of any kind will not be tolerated.
-
-
