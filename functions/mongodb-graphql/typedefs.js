@@ -11,8 +11,14 @@ module.exports = gql`
         post(_id: ID!): Post
         posts: [Post!]!
     }
+
+    input PostInput {
+        title: String
+        content: String
+    }
     
     type Mutation {
         createPost(title: String!, content: String!): Post!
+        updatePost(_id: ID!, input: PostInput!): Post!
     }
 `;
