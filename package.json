@@ -6,14 +6,16 @@
   "dependencies": {
     "apollo-server-lambda": "^2.10.1",
     "apollo-server-micro": "^2.10.1",
+    "encoding": "^0.1.12",
     "graphql": "^14.6.0",
     "mongodb": "^3.5.3",
-    "mongoose": "^5.9.1"
+    "mongoose": "^5.9.1",
+    "utf-8-validate": "^5.0.2"
   },
   "scripts": {
     "start:lambda": "netlify-lambda serve functions/mongodb-graphql/",
-    "build": "run-p build:public/**",
-    "build:app": "cd public && npm build",
+    "build": "run-p build:web/**",
+    "build:app": "cd web && yarn build",
     "build:lambda": "netlify-lambda build functions/mongodb-graphql/"
   },
   "repository": {

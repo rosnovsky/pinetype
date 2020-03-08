@@ -1,5 +1,6 @@
 const MongoClient = require("mongodb").MongoClient;
-const URI = "mongodb+srv://gqlServer:M5u2cPyvnHPdmbHv@pinetype-or-us-sztbp.mongodb.net/pinetype";
+const encoding = require('encoding');
+const URI = process.env.URL;
 const DB_NAME = "pinetype";
 
 let cachedDb = null;
