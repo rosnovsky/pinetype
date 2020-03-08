@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start:lambda": "netlify-lambda serve functions/mongodb-graphql/",
-    "build": "cd web && yarn build",
+    "build": "cd web && yarn && yarn build",
     "build:lambda": "netlify-lambda build functions/mongodb-graphql/"
   },
   "repository": {
