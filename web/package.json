@@ -34,7 +34,7 @@
     "apollo-boost": "^0.4.7",
     "apollo-link": "^1.2.13",
     "apollo-link-http": "^1.5.16",
-    "apollo-server-micro": "^2.10.1",
+    "apollo-server-micro": "^2.14.2",
     "graphql": "^14.6.0",
     "sirv-cli": "^0.4.4",
     "svelte-apollo": "^0.3.0"
